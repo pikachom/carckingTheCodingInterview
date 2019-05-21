@@ -1,5 +1,5 @@
 package chap1;
-
+//////////°³ºıÃÄ¼­¸øÇÏ°ÙÀ½ ¤µ¤¡
 public class Question7 {
 	public boolean isRotatable(int[][] matrix) {
 		if (matrix.length == matrix[0].length) {
