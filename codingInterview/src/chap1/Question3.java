@@ -18,6 +18,7 @@ public class Question3 {
 	public static void main(String[] args) {
 		Question3 test = new Question3();
 		System.out.println(test.urlify("È« ¤·¤·¤· ±â          ", 7));
+		System.out.println(test.urlify("Mr John Smith    ", 13));
 	}
 
 }
