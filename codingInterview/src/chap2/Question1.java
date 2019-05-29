@@ -9,10 +9,11 @@ public class Question1 {
 		HashSet<Integer> dataSet = new HashSet<Integer>();
 		while(n.next != null) {			
 			if(dataSet.contains(n.data)) {
-				tmpNode = n;
+				tmpNode.next = n.next;				
 				//¾Æ´Ï¾¯¹úµµ´ëÃ¼¿Ö ¾ÈµÅ????
 			}else {
-				dataSet.add(n.data);				
+				dataSet.add(n.data);
+				tmpNode = n;
 			}
 			
 			n = n.next;			
