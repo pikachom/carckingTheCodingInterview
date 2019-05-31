@@ -38,6 +38,12 @@ public class LinkedListNode {
 			n = n.next;
 		}
 	}
+	public void appendTenRandomElements() {
+		for(int i=1; i<=10; i++) {
+			int d = (int)(Math.random() * 10) + 1;
+			this.appendToTail(d);
+		}
+	}
 	
 	public class Node{
 		Node next = null;
