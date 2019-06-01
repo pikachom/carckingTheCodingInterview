@@ -1,6 +1,6 @@
 package chap2;
 
-public class LinkedListNode {
+public class LinkedList {
 	
 	public Node head = null;
 	

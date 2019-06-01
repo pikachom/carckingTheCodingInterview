@@ -3,9 +3,9 @@ package chap2;
 import java.util.HashSet;
 
 public class Question1 {
-	public void removeDuplication(LinkedListNode ll) {
-		LinkedListNode.Node n = ll.head;
-		LinkedListNode.Node tmpNode  = null;
+	public void removeDuplication(LinkedList ll) {
+		LinkedList.Node n = ll.head;
+		LinkedList.Node tmpNode  = null;
 		HashSet<Integer> dataSet = new HashSet<Integer>();
 		while(n.next != null) {			
 			if(dataSet.contains(n.data)) {
@@ -21,7 +21,7 @@ public class Question1 {
 				
 	}
 	public static void main(String[] args) {
-		LinkedListNode ll = new LinkedListNode();
+		LinkedList ll = new LinkedList();
 		ll.appendToTail(1);
 		ll.appendToTail(2);
 		ll.appendToTail(3);

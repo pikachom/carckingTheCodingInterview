@@ -1,10 +1,10 @@
 package chap2;
 
 public class Question4 {
-	public LinkedListNode dividePartition(LinkedListNode ll, int partition) {
-		LinkedListNode left = new LinkedListNode();
-		LinkedListNode right = new LinkedListNode();
-		LinkedListNode.Node n = ll.head;
+	public LinkedList dividePartition(LinkedList ll, int partition) {
+		LinkedList left = new LinkedList();
+		LinkedList right = new LinkedList();
+		LinkedList.Node n = ll.head;
 		//LinkedListNode.Node rNode = right.head; 여기에 이걸 넣어놓으면 계속 head가 null인 문제가 있었음...
 		
 		
@@ -17,7 +17,7 @@ public class Question4 {
 			n = n.next;
 		}
 		
-		LinkedListNode.Node rNode = right.head;
+		LinkedList.Node rNode = right.head;
 				
 		while(rNode != null) {
 			left.appendToTail(rNode.data);
@@ -27,7 +27,7 @@ public class Question4 {
 		return left;
 	}
 	public static void main(String[] args) {
-		LinkedListNode ll = new LinkedListNode();
+		LinkedList ll = new LinkedList();
 		ll.addFiveRandomElements();
 		ll.printList();
 		System.out.println("======================");

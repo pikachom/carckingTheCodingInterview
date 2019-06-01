@@ -1,11 +1,11 @@
 package chap2;
 
 public class Question5 {
-	public int sumList(LinkedListNode list1, LinkedListNode list2) {		
+	public int sumList(LinkedList list1, LinkedList list2) {		
 		return getNumberFromLinkedList(list1) + getNumberFromLinkedList(list2);
 	}
-	public int getNumberFromLinkedList(LinkedListNode ll) {
-		LinkedListNode.Node node = ll.head;
+	public int getNumberFromLinkedList(LinkedList ll) {
+		LinkedList.Node node = ll.head;
 		int result = 0;
 		int power = 0;
 		int tmp = 0;
@@ -22,8 +22,8 @@ public class Question5 {
 		return result;
 	}
 	public static void main(String[] args) {
-		LinkedListNode ll = new LinkedListNode();
-		LinkedListNode ll2 = new LinkedListNode();
+		LinkedList ll = new LinkedList();
+		LinkedList ll2 = new LinkedList();
 		ll.addFiveRandomElements();
 		ll2.addFiveRandomElements();
 		Question5 test = new Question5();
