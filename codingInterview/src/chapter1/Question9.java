@@ -1,4 +1,4 @@
-package chap1;
+package chapter1;
 
 public class Question9 {
 	public boolean isSubstring(String first, String second) {

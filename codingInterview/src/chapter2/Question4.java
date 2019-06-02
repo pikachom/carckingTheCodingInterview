@@ -1,4 +1,4 @@
-package chap2;
+package chapter2;
 
 public class Question4 {
 	public LinkedList dividePartition(LinkedList ll, int partition) {

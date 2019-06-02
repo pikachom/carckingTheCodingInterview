@@ -1,8 +1,8 @@
-package chap2;
+package chapter2;
 
 import java.util.HashSet;
 
-import chap2.LinkedList.Node;
+import chapter2.LinkedList.Node;
 
 public class Question8 {
 	public Node loopDetection(LinkedList ll) {

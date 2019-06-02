@@ -1,4 +1,4 @@
-package chap1;
+package chapter1;
 
 public class Question3 {
 	public String urlify(String input, int trueLength) { // 이름이 그냥 urlify여도 되나요?

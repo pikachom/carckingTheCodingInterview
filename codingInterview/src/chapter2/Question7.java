@@ -1,4 +1,4 @@
-package chap2;
+package chapter2;
 
 public class Question7 {
 	public boolean hasIntersection(LinkedList longer, LinkedList shorter) {

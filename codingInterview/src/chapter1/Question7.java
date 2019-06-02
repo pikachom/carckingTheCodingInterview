@@ -1,4 +1,4 @@
-package chap1;
+package chapter1;
 
 //////////°³ºıÃÄ¼­¸øÇÏ°ÙÀ½ ¤µ¤¡
 public class Question7 {

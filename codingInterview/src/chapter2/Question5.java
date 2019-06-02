@@ -1,4 +1,4 @@
-package chap2;
+package chapter2;
 
 public class Question5 {
 	public int sumList(LinkedList list1, LinkedList list2) {		

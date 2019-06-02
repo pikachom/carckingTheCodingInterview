@@ -1,4 +1,4 @@
-package chap1;
+package chapter1;
 
 public class Question8 {
 	public int[][] zeroTest(int[][] matrix) {

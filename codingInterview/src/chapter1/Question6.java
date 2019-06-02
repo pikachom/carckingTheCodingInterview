@@ -1,4 +1,4 @@
-package chap1;
+package chapter1;
 
 //n^2이 안 되도록 만드는 방법을 모르겠음...char'사전'을 만들어서 돌리면 26n이 될 순 있겠지만...
 public class Question6 {

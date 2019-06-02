@@ -1,4 +1,4 @@
-package chap2;
+package chapter2;
 
 //다른 자료형을(array같은) 안쓰고 해보고싶었는데 넘 어려워요
 
