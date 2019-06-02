@@ -1,8 +1,8 @@
 package chap2;
 
 public class Question2_2 {
-	public LinkedListNode kToLast(LinkedListNode ll, int k) {
-		LinkedListNode.Node n = ll.head;
+	public LinkedList kToLast(LinkedList ll, int k) {
+		LinkedList.Node n = ll.head;
 		int index = 1;
 		while(n != null) {
 //			if(index >= k) {
@@ -23,7 +23,7 @@ public class Question2_2 {
 		return ll;
 	}
 	public static void main(String[] args) {
-		LinkedListNode ll = new LinkedListNode();
+		LinkedList ll = new LinkedList();
 		ll.appendToTail(1);
 		ll.appendToTail(2);
 		ll.appendToTail(3);
