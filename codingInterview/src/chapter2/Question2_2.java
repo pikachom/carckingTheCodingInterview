@@ -1,4 +1,4 @@
-package chap2;
+package chapter2;
 
 public class Question2_2 {
 	public LinkedList kToLast(LinkedList ll, int k) {
