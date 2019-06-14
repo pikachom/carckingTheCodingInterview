@@ -78,7 +78,7 @@ public class Question6 {
 		System.out.println(shelter.dequeueAny().getName());
 		System.out.println(shelter.dequeueAny().getName());
 		System.out.println(shelter.dequeueCat().getName());
-		
+		//shelter.enqueue("±âÈÆ", "»ç¶÷");
 		
 		
 	}
