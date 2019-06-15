@@ -1,7 +1,9 @@
 package chapter4;
 
+import java.util.ArrayList;
+
 public class Graph {
-	public Node[] nodes;
+	public ArrayList<Node> nodes;
 	
 	public boolean hasNode(Node n1) {
 		for(Node n : nodes) {
@@ -11,4 +13,6 @@ public class Graph {
 		}
 		return false;
 	}
+
+	
 }
