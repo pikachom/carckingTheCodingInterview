@@ -2,7 +2,7 @@ package chapter3;
 
 import java.util.EmptyStackException;
 
-public class MyStack<T> {
+public class KhMyStack<T> {
 	public static class StackNode<T>{
 		T data;
 		StackNode<T> next;

@@ -3,7 +3,7 @@ package chapter3;
 import java.util.EmptyStackException;
 
 public class Question2 {
-	public class StackWithMin<Integer> extends MyStack<Integer>{
+	public class StackWithMin<Integer> extends KhMyStack<Integer>{
 				
 		public class NodeWithMin<Integer>{
 			private NodeWithMin<Integer> next;
@@ -14,7 +14,7 @@ public class Question2 {
 			}
 		}				
 		private NodeWithMin<Integer> top;
-		private MyStack<Integer> minStack;
+		private KhMyStack<Integer> minStack;
 		
 		
 		public Integer pop() {

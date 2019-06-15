@@ -3,7 +3,7 @@ package chapter3;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-import chapter3.MyStack.StackNode;
+import chapter3.KhMyStack.StackNode;
 
 public class Question3 {
 	public class SetOfStacks{
@@ -13,8 +13,8 @@ public class Question3 {
 		}
 		public int capacity;
 		
-		ArrayList<MyStack<Integer>> stacks = new ArrayList<MyStack<Integer>>();		
-		MyStack<Integer> tmpStack = new MyStack<Integer>();
+		ArrayList<KhMyStack<Integer>> stacks = new ArrayList<KhMyStack<Integer>>();		
+		KhMyStack<Integer> tmpStack = new KhMyStack<Integer>();
 		
 		public void push(Integer item) {			
 			tmpStack = stacks.get(stacks.size()-1);
@@ -24,7 +24,7 @@ public class Question3 {
 				tmpStack.top = t;
 				stacks.set(tmpStack.stackLength-1, tmpStack);
 			}else {
-				MyStack<Integer> newStack = new MyStack<Integer>();
+				KhMyStack<Integer> newStack = new KhMyStack<Integer>();
 				newStack.push(item);				
 				stacks.add(newStack);
 			}

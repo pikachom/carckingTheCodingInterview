@@ -1,8 +1,8 @@
 package chapter3;
 
 public class Question5 {
-	public MyStack<Integer> sort(MyStack<Integer> stack){
-		MyStack<Integer> sortedStack = new MyStack<Integer>();
+	public KhMyStack<Integer> sort(KhMyStack<Integer> stack){
+		KhMyStack<Integer> sortedStack = new KhMyStack<Integer>();
 		while(!stack.isEmpty()) {
 			Integer tmpValue = stack.pop();
 			while(!sortedStack.isEmpty() && sortedStack.peek()>tmpValue) {
@@ -16,7 +16,7 @@ public class Question5 {
 	
 	public static void main(String[] args) {
 		Question5 test = new Question5();
-		MyStack<Integer> testStack = new MyStack<Integer>();
+		KhMyStack<Integer> testStack = new KhMyStack<Integer>();
 		testStack.push(11);
 		testStack.push(23);
 		testStack.push(5);
@@ -24,7 +24,7 @@ public class Question5 {
 		testStack.push(2);
 		testStack.push(88);
 		
-		MyStack<Integer> resultStack = new MyStack<Integer>();
+		KhMyStack<Integer> resultStack = new KhMyStack<Integer>();
 		resultStack = test.sort(testStack);
 		
 		while(!resultStack.isEmpty()) {
