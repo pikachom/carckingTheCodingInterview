@@ -1,14 +1,15 @@
 package chapter4;
 
+import java.util.ArrayList;
+
 public class Node {
-	public String name;
-	public Node[] adjacent;
+	public String name = "";
+	public ArrayList<Node> adjacent = new ArrayList<Node>();
 	public NodeStates state;
 	
-	public Node[] getAdjacent(){
+	public ArrayList<Node> getAdjacent(){
 		return this.adjacent;
 	}
-	
 	enum NodeStates{
 		Unvisited, Visited, Visiting;
 	}
