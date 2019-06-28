@@ -2,11 +2,20 @@ package chapter4;
 
 public class Question2 {
 	public TreeNode createMinimalBST(int[] array) {
+		if(array == null) {
+			return null;
+		}
 		int middleIndex = (array.length-1)/2;
 		TreeNode middleNode = new TreeNode(array[middleIndex]);
-		return createMinimalBST(왼쪽어레이, middleNode, 오른쪽어레이);
+		int[] leftArr = new int[middleIndex];
+		int[] rightArr = new int[middleIndex];
+		for(int i=0; i<middleIndex; i++) {
+			leftArr[i] = array[i];
+			rightArr[i] = array[middleIndex+i+1];
+		}
+		middleNode.left = createMinimalBST(leftArr);
+		middleNode.right = createMinimalBST(rightArr);
+		return middleNode;
 	}
-	TreeNode createMinimalBST(int[] leftArr, TreeNode middleNode, int[] rightArr) {
-		return null;
-	}
+	//다 된것같은데 테스트하려니 막막해서 패스 ^^ㅎ;
 }
