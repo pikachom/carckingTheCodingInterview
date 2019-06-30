@@ -17,6 +17,6 @@ public class Question4 {
 		} else {
 			return isBalanced(root.left) && isBalanced(root.right); 
 		}
-		
+		//이게 AVL트리 라고 하네요 ㅎ
 	}
 }
