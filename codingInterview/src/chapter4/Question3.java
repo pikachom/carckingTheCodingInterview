@@ -63,6 +63,7 @@ public class Question3 {
 		TreeNode n4 = new TreeNode(4);
 		TreeNode n5 = new TreeNode(5);
 		BinarySearchTree tree = new BinarySearchTree(0);
+		TreeNode root = tree.root;
 		tree.root.left = n1;
 		tree.root.right = n2;
 		n1.left = n3;
