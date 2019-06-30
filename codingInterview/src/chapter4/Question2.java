@@ -17,5 +17,5 @@ public class Question2 {
 		middleNode.right = createMinimalBST(rightArr);
 		return middleNode;
 	}
-	//다 된것같은데 테스트하려니 막막해서 패스 ^^ㅎ;
+	
 }
