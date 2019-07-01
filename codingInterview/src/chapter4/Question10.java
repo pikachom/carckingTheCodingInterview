@@ -3,17 +3,17 @@ package chapter4;
 import java.util.Stack;
 
 public class Question10 {
-	public boolean checkContainsTree(BinarySearchTree t1, BinarySearchTree t2) {
-		TreeNode nodeToFind = t2.root;
-		TreeNode root = t1.root;
+	public boolean checkContainsTree(KhBinarySearchTree t1, KhBinarySearchTree t2) {
+		KhTreeNode nodeToFind = t2.root;
+		KhTreeNode root = t1.root;
 		if(root == null) {
 			return false;
 		}
-		Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+		Stack<KhTreeNode> nodeStack = new Stack<KhTreeNode>();
 		nodeStack.push(root);
 		
 		while(!nodeStack.isEmpty()) {
-			TreeNode node = nodeStack.pop();
+			KhTreeNode node = nodeStack.pop();
 			if(node == nodeToFind) {
 				return true;
 			}

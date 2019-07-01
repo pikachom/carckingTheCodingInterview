@@ -2,12 +2,12 @@ package chapter4;
 
 import java.util.ArrayList;
 
-public class Node {
+public class KhNode {
 	public String name = "";
-	public ArrayList<Node> adjacent = new ArrayList<Node>();
+	public ArrayList<KhNode> adjacent = new ArrayList<KhNode>();
 	public NodeStates state;
 	
-	public ArrayList<Node> getAdjacent(){
+	public ArrayList<KhNode> getAdjacent(){
 		return this.adjacent;
 	}
 	enum NodeStates{

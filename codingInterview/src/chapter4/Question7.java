@@ -2,10 +2,7 @@ package chapter4;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-/*
- * 솔루션과 동일함...너무어렵당..
- * 
- * */
+
 public class Question7 {
 	public class Project{
 		private ArrayList<Project> children = new ArrayList<Project>();

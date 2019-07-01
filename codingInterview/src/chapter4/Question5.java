@@ -1,10 +1,10 @@
 package chapter4;
 
 public class Question5 {
-	public boolean checkBST(TreeNode root) {
+	public boolean checkBST(KhTreeNode root) {
 		return checkBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
-	public boolean checkBST(TreeNode node, int min, int max) {
+	public boolean checkBST(KhTreeNode node, int min, int max) {
 		if(node == null) {
 			return true;
 		}
@@ -17,13 +17,13 @@ public class Question5 {
 		
 	}
 	public static void main(String[] args) {
-		TreeNode n1 = new TreeNode(3);
-		TreeNode n2 = new TreeNode(8);
-		TreeNode n3 = new TreeNode(2);
-		TreeNode n4 = new TreeNode(4);
-		TreeNode n5 = new TreeNode(6);
-		BinarySearchTree tree = new BinarySearchTree(5);
-		TreeNode root = tree.root;
+		KhTreeNode n1 = new KhTreeNode(3);
+		KhTreeNode n2 = new KhTreeNode(8);
+		KhTreeNode n3 = new KhTreeNode(2);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(6);
+		KhBinarySearchTree tree = new KhBinarySearchTree(5);
+		KhTreeNode root = tree.root;
 		tree.root.left = n1;
 		tree.root.right = n2;
 		n1.left = n3;

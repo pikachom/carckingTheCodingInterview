@@ -1,13 +1,13 @@
 package chapter4;
 
 public class Question4 {
-	public int getHeight(TreeNode root) {
+	public int getHeight(KhTreeNode root) {
 		if(root == null) {
 			return -1;
 		}
 		return Math.max(getHeight(root.left),  getHeight(root.right)) + 1 ; 
 	}
-	public boolean isBalanced(TreeNode root) {
+	public boolean isBalanced(KhTreeNode root) {
 		if(root == null) {
 			return true;
 		}
@@ -17,16 +17,16 @@ public class Question4 {
 		} else {
 			return isBalanced(root.left) && isBalanced(root.right); 
 		}
-		//ÀÌ°Ô AVLÆ®¸® ¶ó°í ÇÏ³×¿ä ¤¾
+		//ï¿½Ì°ï¿½ AVLÆ®ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï³×¿ï¿½ ï¿½ï¿½
 	}
 	public static void main(String[] args) {
-		TreeNode n1 = new TreeNode(1);
-		TreeNode n2 = new TreeNode(2);
-		TreeNode n3 = new TreeNode(3);
-		TreeNode n4 = new TreeNode(4);
-		TreeNode n5 = new TreeNode(5);
-		BinarySearchTree tree = new BinarySearchTree(0);
-		TreeNode root = tree.root;
+		KhTreeNode n1 = new KhTreeNode(1);
+		KhTreeNode n2 = new KhTreeNode(2);
+		KhTreeNode n3 = new KhTreeNode(3);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(5);
+		KhBinarySearchTree tree = new KhBinarySearchTree(0);
+		KhTreeNode root = tree.root;
 		tree.root.left = n1;
 		tree.root.right = n2;
 		n1.left = n3;

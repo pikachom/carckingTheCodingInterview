@@ -1,7 +1,7 @@
 package chapter4;
 
 public class Question12 {
-	public int countPathsWithSum(TreeNode root, int targetSum) {
+	public int countPathsWithSum(KhTreeNode root, int targetSum) {
 		if(root == null) return 0;
 	
 	int pathsFromRoot = countPathsWithSumFromNode(root, targetSum, 0);
@@ -11,7 +11,7 @@ public class Question12 {
 	
 	return pathsFromRoot + pathsOnLeft + pathsOnRight;
 	}
-	public int countPathsWithSumFromNode(TreeNode node, int targetSum, int currentSum) {
+	public int countPathsWithSumFromNode(KhTreeNode node, int targetSum, int currentSum) {
 		if(node == null) return 0;
 		currentSum += node.value;
 		
@@ -23,5 +23,5 @@ public class Question12 {
 		totalPaths += countPathsWithSumFromNode(node.right, targetSum, currentSum);
 		return totalPaths;
 	}
-	// ¼Ö·ç¼Ç°ú µ¿ÀÏÇÔ..
+	//ã…‡ã…‡..
 }

@@ -4,17 +4,17 @@ import java.util.Random;
 import java.util.Stack;
 
 public class Question11 {
-	public TreeNode getRandomNode(BinarySearchTree tree) {
-		TreeNode root = tree.root;
+	public KhTreeNode getRandomNode(KhBinarySearchTree tree) {
+		KhTreeNode root = tree.root;
 		int numNodes = 0;
 		if(root == null) {
 			return null;
 		}
-		Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+		Stack<KhTreeNode> nodeStack = new Stack<KhTreeNode>();
 		nodeStack.push(root);
 		
 		while(!nodeStack.isEmpty()) {
-			TreeNode node = nodeStack.pop();
+			KhTreeNode node = nodeStack.pop();
 			numNodes ++;
 			
 			if(node.right != null) {
@@ -25,8 +25,8 @@ public class Question11 {
 			}
 		}
 		
-		// search¸¦ ÇÑ ¹ø ´õÇÏ´Â°Ô ¸¾¿¡ °É¸²
-		//¸ðµç node¸¦ µû·Î ÀúÀåÇØµ×´Ù°¡ index·Î Á¢±ÙÇÏ´Â°Í°ú ÀÌ ¹æ¹ýÁß ¹¹°¡ ³ªÀ»Áö?
+		// searchï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½É¸ï¿½
+		//ï¿½ï¿½ï¿½ nodeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµ×´Ù°ï¿½ indexï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Â°Í°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 		Random random = new Random();
 		int randomNodeNum = random.nextInt(numNodes);
 		
@@ -35,7 +35,7 @@ public class Question11 {
 		nodeStack.push(root);
 		
 		while(!nodeStack.isEmpty()) {
-			TreeNode node = nodeStack.pop();
+			KhTreeNode node = nodeStack.pop();
 			numNodes ++;
 			if(numNodes == randomNodeNum) {
 				return node;

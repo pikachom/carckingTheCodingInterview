@@ -10,21 +10,21 @@ import java.util.Stack;
 
 
 public class Question3 {
-	public HashMap<TreeNode, Integer> makeNodeMap(BinarySearchTree tree){
-		//<node, ÇØ´ç³ëµåÀÇ depth>¸¦ ÀúÀåÇÏ´Â ¸ÊÀ» ¸¸µë
+	public HashMap<KhTreeNode, Integer> makeNodeMap(KhBinarySearchTree tree){
+		//<node, ï¿½Ø´ï¿½ï¿½ï¿½ï¿½ï¿½ depth>ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
-		TreeNode root = tree.root;
+		KhTreeNode root = tree.root;
 		int depth = 0;
-		HashMap<TreeNode, Integer> resultMap = new HashMap<TreeNode, Integer>();
+		HashMap<KhTreeNode, Integer> resultMap = new HashMap<KhTreeNode, Integer>();
 		if(root == null) {
 			return null;
 		}
-		Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+		Stack<KhTreeNode> nodeStack = new Stack<KhTreeNode>();
 		nodeStack.push(root);
 		resultMap.put(root, depth);
 		
 		while(!nodeStack.isEmpty()) {
-			TreeNode node = nodeStack.pop();			
+			KhTreeNode node = nodeStack.pop();			
 			resultMap.put(node,depth);
 			if(node.right != null) {
 				nodeStack.push(node.right);
@@ -38,18 +38,18 @@ public class Question3 {
 		return resultMap;				
 	}
 	
-	public ArrayList<LinkedList<TreeNode>> makeLinkedListFromMap(HashMap<TreeNode, Integer> nodeMap){
-		//¸¸µé¾îÁø ¸Ê¿¡¼­ Æ®¸®³ëµåÀÇ llÀ» ¸¸µé°í arraylist¿¡ Áý¾î³ÖÀ½
+	public ArrayList<LinkedList<KhTreeNode>> makeLinkedListFromMap(HashMap<KhTreeNode, Integer> nodeMap){
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ llï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ arraylistï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
-		ArrayList<LinkedList<TreeNode>> resultArrList = new ArrayList<LinkedList<TreeNode>>();
-		for(TreeNode node : nodeMap.keySet()) {
+		ArrayList<LinkedList<KhTreeNode>> resultArrList = new ArrayList<LinkedList<KhTreeNode>>();
+		for(KhTreeNode node : nodeMap.keySet()) {
 			
 			
 			int index = nodeMap.get(node);
 			if(resultArrList.get(index) == null) {
-				resultArrList.add(index, new LinkedList<TreeNode>());
+				resultArrList.add(index, new LinkedList<KhTreeNode>());
 			}
-			LinkedList<TreeNode> linkedList = resultArrList.get(index);
+			LinkedList<KhTreeNode> linkedList = resultArrList.get(index);
 			linkedList.add(node);
 		}
 		
@@ -57,13 +57,13 @@ public class Question3 {
 		return resultArrList;
 	}
 	public static void main(String[] args) {
-		TreeNode n1 = new TreeNode(1);
-		TreeNode n2 = new TreeNode(2);
-		TreeNode n3 = new TreeNode(3);
-		TreeNode n4 = new TreeNode(4);
-		TreeNode n5 = new TreeNode(5);
-		BinarySearchTree tree = new BinarySearchTree(0);
-		TreeNode root = tree.root;
+		KhTreeNode n1 = new KhTreeNode(1);
+		KhTreeNode n2 = new KhTreeNode(2);
+		KhTreeNode n3 = new KhTreeNode(3);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(5);
+		KhBinarySearchTree tree = new KhBinarySearchTree(0);
+		KhTreeNode root = tree.root;
 		tree.root.left = n1;
 		tree.root.right = n2;
 		n1.left = n3;
@@ -71,8 +71,8 @@ public class Question3 {
 		n2.left = n5;
 		
 		Question3 test = new Question3();
-		HashMap<TreeNode, Integer> nodeMap = test.makeNodeMap(tree);
-		ArrayList<LinkedList<TreeNode>> result = test.makeLinkedListFromMap(nodeMap);
+		HashMap<KhTreeNode, Integer> nodeMap = test.makeNodeMap(tree);
+		ArrayList<LinkedList<KhTreeNode>> result = test.makeLinkedListFromMap(nodeMap);
 		System.out.println(result.get(0));
 	}
 }

@@ -2,12 +2,12 @@ package chapter4;
 
 public class Question6 {
 	/*
-	 * successorÀÇ Á¶°Ç
-	 * 1)³ëµåxÀÇ rightÀÌ Á¸ÀçÇÏ´Â °æ¿ì, right subtreeÀÇ leftmost(ÃÖ¼Ò°ª)
-	 * 2)³ëµåxÀÇ rightÀÌ Á¸ÀçÇÏÁö ¾Ê´Â °æ¿ì, ³ëµåyÀÇ subtreeÀÇ rightmost(ÃÖ´ë°ª)ÀÌ ³ëµåxÀÎ ³ëµåy
-	 * 3) À§ÀÇ 2¹øÄÉÀÌ½º°¡ ¾ø´Â °æ¿ì successor°¡ ¾øÀ½
+	 * successorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	 * 1)ï¿½ï¿½ï¿½xï¿½ï¿½ rightï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½, right subtreeï¿½ï¿½ leftmost(ï¿½Ö¼Ò°ï¿½)
+	 * 2)ï¿½ï¿½ï¿½xï¿½ï¿½ rightï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½yï¿½ï¿½ subtreeï¿½ï¿½ rightmost(ï¿½Ö´ë°ª)ï¿½ï¿½ ï¿½ï¿½ï¿½xï¿½ï¿½ ï¿½ï¿½ï¿½y
+	 * 3) ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ successorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 * */
-	public TreeNode findLeftMost(TreeNode root) {
+	public KhTreeNode findLeftMost(KhTreeNode root) {
 		if(root == null) {
 			return null;
 		}
@@ -16,11 +16,11 @@ public class Question6 {
 		}
 		return root;
 	}
-	public TreeNode findSuccessor(TreeNode node) {
+	public KhTreeNode findSuccessor(KhTreeNode node) {
 		if(node.right != null) {
 			return findLeftMost(node.right);
 		}else {
-			TreeNode parent = node.parent;
+			KhTreeNode parent = node.parent;
 			while(parent != null && parent.right == node) {
 				node = parent;
 				parent = parent.parent;
@@ -30,13 +30,13 @@ public class Question6 {
 		
 	}
 	public static void main(String[] args) {
-		TreeNode n1 = new TreeNode(3);
-		TreeNode n2 = new TreeNode(8);
-		TreeNode n3 = new TreeNode(2);
-		TreeNode n4 = new TreeNode(4);
-		TreeNode n5 = new TreeNode(6);
-		BinarySearchTree tree = new BinarySearchTree(5);
-		TreeNode root = tree.root;
+		KhTreeNode n1 = new KhTreeNode(3);
+		KhTreeNode n2 = new KhTreeNode(8);
+		KhTreeNode n3 = new KhTreeNode(2);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(6);
+		KhBinarySearchTree tree = new KhBinarySearchTree(5);
+		KhTreeNode root = tree.root;
 		root.setLeft(n1);
 		root.setRight(n2);
 		n1.setLeft(n3);

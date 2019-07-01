@@ -1,7 +1,7 @@
 package chapter4;
 
 public class Question8 {
-	public int getDepth(TreeNode node) {
+	public int getDepth(KhTreeNode node) {
 		int depth = 0;
 		while(node != null) {
 			node = node.parent;
@@ -10,11 +10,11 @@ public class Question8 {
 		return depth;
 	}
 	
-	public TreeNode commonAncestor(TreeNode lowerNode, TreeNode higherNode) {
-		// °°Àº µª½º³¢¸® ¸ÂÃç³õ°í ÇÑÄ­¾¿ ¿Ã¶ó°¡¸ç ¸ÂÃç¾ßÇÔ
-		// higherNodeÀÇ µª½º°¡ ´õ ±íÀ» °æ¿ì µÑÀ» ¹Ù²ãÁÜ
+	public KhTreeNode commonAncestor(KhTreeNode lowerNode, KhTreeNode higherNode) {
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä­ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// higherNodeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
 		if(getDepth(lowerNode)<getDepth(higherNode)) {
-			TreeNode tmpNode = higherNode;
+			KhTreeNode tmpNode = higherNode;
 			higherNode = lowerNode;
 			lowerNode = tmpNode;
 		}
@@ -35,13 +35,13 @@ public class Question8 {
 	 * 	2	  4    6
 	 * */
 	public static void main(String[] args) {
-		TreeNode n1 = new TreeNode(3);
-		TreeNode n2 = new TreeNode(8);
-		TreeNode n3 = new TreeNode(2);
-		TreeNode n4 = new TreeNode(4);
-		TreeNode n5 = new TreeNode(6);
-		BinarySearchTree tree = new BinarySearchTree(5);
-		TreeNode root = tree.root;
+		KhTreeNode n1 = new KhTreeNode(3);
+		KhTreeNode n2 = new KhTreeNode(8);
+		KhTreeNode n3 = new KhTreeNode(2);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(6);
+		KhBinarySearchTree tree = new KhBinarySearchTree(5);
+		KhTreeNode root = tree.root;
 		root.setLeft(n1);
 		root.setRight(n2);
 		n1.setLeft(n3);

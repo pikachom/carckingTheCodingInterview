@@ -3,31 +3,31 @@ package chapter4;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import chapter4.Node.NodeStates;
+import chapter4.KhNode.NodeStates;
 
 public class Question1 {
-	public boolean hasRouteBetweenNodes(Graph g1, Node fromNode, Node toNode) {
-		//n1¿¡¼­ Ãâ¹ßÇØ¼­ n2±îÁö °¡±â¸¸ ÇÏ¸é µÊ
+	public boolean hasRouteBetweenNodes(KhGraph g1, KhNode fromNode, KhNode toNode) {
+		//n1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ n2ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â¸¸ ï¿½Ï¸ï¿½ ï¿½ï¿½
 		if(!g1.hasNode(fromNode)||!g1.hasNode(toNode)) {
 			return false;
 		}
 		
-		//¹æ¹®¾ÈÇÑ»óÅÂ·Î ÃÊ±âÈ­ ½ÃÅ°±â		
-		for(Node n1 : g1.nodes) {
+		//ï¿½æ¹®ï¿½ï¿½ï¿½Ñ»ï¿½ï¿½Â·ï¿½ ï¿½Ê±ï¿½È­ ï¿½ï¿½Å°ï¿½ï¿½		
+		for(KhNode n1 : g1.nodes) {
 			n1.state = NodeStates.Unvisited;
 		}		
-		//BFS ½ÃÀÛ
+		//BFS ï¿½ï¿½ï¿½ï¿½
 		return breadthFirstSearch(fromNode, toNode);		
 	}
-	public boolean breadthFirstSearch(Node n1, Node n2) {
-		Queue<Node> queue = new LinkedList<Node>();
+	public boolean breadthFirstSearch(KhNode n1, KhNode n2) {
+		Queue<KhNode> queue = new LinkedList<KhNode>();
 		n1.state = NodeStates.Visiting;
 		queue.add(n1);
-		Node visitingNode;
+		KhNode visitingNode;
 		while(!queue.isEmpty()) {
 			visitingNode = queue.remove();
 			if(visitingNode != null) {
-				for(Node neighborNode : visitingNode.getAdjacent()) {
+				for(KhNode neighborNode : visitingNode.getAdjacent()) {
 					if(neighborNode.state == NodeStates.Unvisited) {
 						if(neighborNode == n2) {
 							return true;							
@@ -44,12 +44,12 @@ public class Question1 {
 	}
 	public static void main(String[] args) {
 		Question1 test = new Question1();
-		Graph g1 = new Graph();
-		Node n1 = new Node();
-		Node n2 = new Node();
-		Node n3 = new Node();
-		Node n4 = new Node();
-		Node n5 = new Node();
+		KhGraph g1 = new KhGraph();
+		KhNode n1 = new KhNode();
+		KhNode n2 = new KhNode();
+		KhNode n3 = new KhNode();
+		KhNode n4 = new KhNode();
+		KhNode n5 = new KhNode();
 		g1.addNode(n1);
 		g1.addNode(n2);
 		g1.addNode(n3);
@@ -61,7 +61,7 @@ public class Question1 {
 		g1.connectNode(n1, n5);
 		g1.connectNode(n2, n3);
 		System.out.println(test.hasRouteBetweenNodes(g1, n5, n2));
-		Node n6 = new Node();
+		KhNode n6 = new KhNode();
 		System.out.println(test.hasRouteBetweenNodes(g1, n1, n6));
 	}
 }

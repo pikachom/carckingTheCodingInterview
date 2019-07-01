@@ -2,20 +2,20 @@ package chapter4;
 
 import java.util.Stack;
 
-public class BinarySearchTree {
-	public TreeNode root;
-	public BinarySearchTree(int rootValue) {
-		this.root = new TreeNode(rootValue);
+public class KhBinarySearchTree {
+	public KhTreeNode root;
+	public KhBinarySearchTree(int rootValue) {
+		this.root = new KhTreeNode(rootValue);
 	}
-	public void dfs(TreeNode root) {
+	public void dfs(KhTreeNode root) {
 		if(root == null) {
 			return;
 		}
-		Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+		Stack<KhTreeNode> nodeStack = new Stack<KhTreeNode>();
 		nodeStack.push(root);
 		
 		while(!nodeStack.isEmpty()) {
-			TreeNode node = nodeStack.pop();
+			KhTreeNode node = nodeStack.pop();
 			System.out.println(node.value + " ");
 			
 			if(node.right != null) {
