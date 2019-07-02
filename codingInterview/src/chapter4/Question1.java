@@ -7,16 +7,16 @@ import chapter4.KhNode.NodeStates;
 
 public class Question1 {
 	public boolean hasRouteBetweenNodes(KhGraph g1, KhNode fromNode, KhNode toNode) {
-		//n1���� ����ؼ� n2���� ���⸸ �ϸ� ��
+		//
 		if(!g1.hasNode(fromNode)||!g1.hasNode(toNode)) {
 			return false;
 		}
 		
-		//�湮���ѻ��·� �ʱ�ȭ ��Ű��		
+		//		
 		for(KhNode n1 : g1.nodes) {
 			n1.state = NodeStates.Unvisited;
 		}		
-		//BFS ����
+		//
 		return breadthFirstSearch(fromNode, toNode);		
 	}
 	public boolean breadthFirstSearch(KhNode n1, KhNode n2) {
