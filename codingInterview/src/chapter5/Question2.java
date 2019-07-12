@@ -20,5 +20,12 @@ public class Question2 {
         }
 
         return result.toString();
+        
     }
+    
+    public static void main(String[] args) {
+		double num = 0.55324;
+		Question2 test = new Question2();
+		System.out.println(test.printBinary(num));
+	}
 }
