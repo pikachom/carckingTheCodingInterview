@@ -33,38 +33,54 @@ class CallCenter{
 		call c = this.callQueue.poll();
 		return c;
 	}
-	public void dispatchCall(call c) {
+	public boolean dispatchCall(call c) {
+		boolean result = false;
 		if(c.callRank == 3) {
+			result = directorGetCall(c);
 			
-			//directors가 꽉찼는지 보고 할당 or 콜큐에 넣
 		}else if(c.callRank == 2) {
+			result = managerGetCall(c);
+			if(!result){
+				result = directorGetCall(c);
+			}
 			
+		}else if(c.callRank == 1) {
+			result = respondentGetCall(c);
+			if(!result) {
+				result = managerGetCall(c);
+				if(!result) {
+					result = directorGetCall(c);
+				}
+			}
 		}
-		//반복....
+		return result;
 	}
-	public void directorGetCall(call C) {
+	public boolean directorGetCall(call C) {
 		for(int n=0;n<directors.length;n++) {
 			if(directors[n].workerStatus==Status.free) {
 				directors[n].workerStatus=Status.busy;
-				break;
+				return true;
 			}
-		}			
+		}
+		return false;
 	}
-	public void managerGetCall(call C) {
+	public boolean managerGetCall(call C) {
 		for(int n=0;n<managers.length;n++) {
 			if(managers[n].workerStatus==Status.free) {
 				managers[n].workerStatus=Status.busy;
-				break;
+				return true;
 			}
 		}
+		return false;
 	}
-	public void respondentGetCall(call C) {
+	public boolean respondentGetCall(call C) {
 		for(int n=0;n<respondents.length;n++) {
 			if(respondents[n].workerStatus==Status.free) {
 				respondents[n].workerStatus=Status.busy;
-				break;
+				return true;
 			}
 		}
+		return false;
 	}
 }
 
