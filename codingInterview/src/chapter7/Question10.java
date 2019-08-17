@@ -1,5 +1,7 @@
 package chapter7;
 
+import chapter7.Game_KH.GameState;
+
 public class Question10 {
  // minesweeper
 }
@@ -87,5 +89,55 @@ class Board{
 	public Board(int r, int c, int b) {
 		
 	}
-	//this is crazy i am sorry...
+	private void initializeBoard() {
+		
+	}
+	private boolean flipCell(Cell cell) {
+		return true;
+	}
+	public void expandBlank(Cell cell) {
+	}
+	public UserPlayResult playFlip(UserPlay play) {
+		UserPlayResult rs = new UserPlayResult();
+		return rs;
+	}
+	public int getNumRemaining() {
+		return numUnexposedRemaining;
+	}
+}
+class Game_KH{
+	public enum GameState{WON, LOST, RUNNING}
+	
+	private Board board;
+	private int rows;
+	private int columns;
+	private int bombs;
+	private GameState state;
+	public Game_KH(int r, int c, int b) {
+		
+	}
+	public boolean initialize() {
+		return true;
+	}
+	public boolean start() {
+		return true;
+	}
+	private boolean playGame() {
+		//loops until game is over
+		return true;
+	}
+	
+}
+
+
+class UserPlay{
+	private int row;
+	private int column;
+	private boolean isGuess;
+	/* constructor, getters, setters */
+}
+class UserPlayResult{
+	private boolean successful;
+	private Game_KH.GameState resultingState;
+	/* constructor, getters, setters */
 }
