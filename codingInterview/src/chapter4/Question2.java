@@ -17,5 +17,16 @@ public class Question2 {
 		middleNode.right = createMinimalBST(rightArr);
 		return middleNode;
 	}
-	
+	public static void main(String[] args){
+		int arr[] = new int[6];
+		arr[0] = 2;
+		arr[1] = 4;
+		arr[2] = 6;
+		arr[3] = 8;
+		arr[4] = 10;
+		arr[5] = 20;
+		Question2 test = new Question2();
+		test.createMinimalBST(arr);
+		
+	}
 }
