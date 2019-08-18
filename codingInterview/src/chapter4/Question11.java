@@ -1,5 +1,6 @@
 package chapter4;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
@@ -11,10 +12,12 @@ public class Question11 {
 			return null;
 		}
 		Stack<KhTreeNode> nodeStack = new Stack<KhTreeNode>();
+		ArrayList<KhTreeNode> nodes = new ArrayList<KhTreeNode>();
 		nodeStack.push(root);
 		
 		while(!nodeStack.isEmpty()) {
 			KhTreeNode node = nodeStack.pop();
+			nodes.add(node);
 			numNodes ++;
 			
 			if(node.right != null) {
@@ -24,31 +27,54 @@ public class Question11 {
 				nodeStack.push(node.left);
 			}
 		}
+		//ÀüÃ¼ ³ëµå ¼ö Ã¼Å©¿Ï·á
+		//³ëµå½ºÅÃÀº ºñ¾úÀ½ 
 		
-		// searchï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½É¸ï¿½
-		//ï¿½ï¿½ï¿½ nodeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµ×´Ù°ï¿½ indexï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Â°Í°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 		Random random = new Random();
 		int randomNodeNum = random.nextInt(numNodes);
-		
-		
-		numNodes = 0;
-		nodeStack.push(root);
-		
-		while(!nodeStack.isEmpty()) {
-			KhTreeNode node = nodeStack.pop();
-			numNodes ++;
-			if(numNodes == randomNodeNum) {
-				return node;
-			}
-			
-			if(node.right != null) {
-				nodeStack.push(node.right);
-			}
-			if(node.left != null) {
-				nodeStack.push(node.left);
-			}
-		}
-		return null;
-		
+		return nodes.get(randomNodeNum);
 	}
+	public static void main(String[] args) {
+		/*
+		 * 			5
+		 * 		3		 8
+		 * 	2	  4    6
+		 * */
+		KhTreeNode n1 = new KhTreeNode(3);
+		KhTreeNode n2 = new KhTreeNode(8);
+		KhTreeNode n3 = new KhTreeNode(2);
+		KhTreeNode n4 = new KhTreeNode(4);
+		KhTreeNode n5 = new KhTreeNode(6);
+		KhBinarySearchTree tree = new KhBinarySearchTree(5);
+		KhTreeNode root = tree.root;
+		root.setLeft(n1);
+		root.setRight(n2);
+		n1.setLeft(n3);
+		n1.setRight(n4);
+		n2.setLeft(n5);
+		Question11 test = new Question11();
+		System.out.println(test.getRandomNode(tree).value);
+	}
+		//¾Æ·¡Ã³·³ ÀüÃ¼°Ë»öÇÏÁö¸»°í ¹Ù·Î ·£´ýÀÎµ¦½º¿¡ ´ëÇØ Ã£
+//		
+//		numNodes = 0;
+//		nodeStack.push(root);
+//		
+//		while(!nodeStack.isEmpty()) {
+//			KhTreeNode node = nodeStack.pop();
+//			numNodes ++;
+//			if(numNodes == randomNodeNum) {
+//				return node;
+//			}
+//			
+//			if(node.right != null) {
+//				nodeStack.push(node.right);
+//			}
+//			if(node.left != null) {
+//				nodeStack.push(node.left);
+//			}
+//		}
+//		return null;
+//		
+//	}
 }
