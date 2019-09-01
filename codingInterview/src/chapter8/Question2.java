@@ -1,7 +1,6 @@
 package chapter8;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class Question2 {
