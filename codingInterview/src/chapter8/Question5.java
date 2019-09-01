@@ -27,4 +27,9 @@ public class Question5 {
 			return halfResult + halfResult + bigger;
 		}
 	}
+	public static void main(String[] args) {
+		Question5 test = new Question5();
+		System.out.println(test.getProduct(30, 43));
+		System.out.println(test.getProduct(31, 11));
+	}
 }
