@@ -9,14 +9,23 @@ public class Question6 {
 		Stack<Disk> thirdTower = new Stack<Disk>();
 		public Hanoi(int levels) {
 			for(int i=1; i<=levels; i++) {
-				Disk tempDisk = new Disk(i); 
+				Disk tempDisk = new Disk(levels+1-i); 
 				this.firstTower.add(tempDisk);
 			}
 		
 		}
 		void moveDisk(int numDiskToMove, int destination) {
+			
 			//움직이는거 만들고...과정마다 프린트하고...ㅎ
 		}
+		void showStatus() {
+			Stack<Disk> tempTower = new Stack<Disk>();
+			tempTower = firstTower;
+			for(Disk disk : firstTower) {
+				firstTower.pop();
+			}
+		}
+		
 	}
 	class Disk{
 		int level;
