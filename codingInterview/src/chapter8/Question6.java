@@ -16,9 +16,13 @@ public class Question6 {
 			}
 		
 		}
-		void moveDisk(int numDiskToMove, int destination) {
-			
-			//움직이는거 만들고...과정마다 프린트하고...ㅎ
+		void moveDisk(int numDiskToMove, Tower from, Tower to, Tower buffer) {
+			if(numDiskToMove>0) {
+				showStatus();
+				moveDisk(numDiskToMove-1, from, buffer, to);
+				from.moveTopTo(to);
+				moveDisk(numDiskToMove-1, buffer, to, from);
+			}
 		}
 		void showStatus() {
 			for(Tower t : towers) {
@@ -52,6 +56,7 @@ public class Question6 {
 				t.diskStack.push(top);
 			}
 		}
+		
 	}	
 	
 	class Disk{
@@ -65,7 +70,10 @@ public class Question6 {
 		Question6 test = new Question6();
 		Hanoi hanoi = test.new Hanoi(5);
 		hanoi.showStatus();
-		hanoi.towers[0].moveTopTo(hanoi.towers[2]);
-
+		Tower t1 = hanoi.towers[0];
+		Tower t2 = hanoi.towers[1];
+		Tower t3 = hanoi.towers[2];
+		hanoi.moveDisk(5, t1, t3, t2);
+		hanoi.showStatus();
 	}
 }
