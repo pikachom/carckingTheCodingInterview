@@ -31,5 +31,6 @@ public class Question5 {
 		Question5 test = new Question5();
 		System.out.println(test.getProduct(30, 43));
 		System.out.println(test.getProduct(31, 11));
+		System.out.println(test.getProduct(11, 11));
 	}
 }

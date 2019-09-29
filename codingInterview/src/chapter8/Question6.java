@@ -73,6 +73,7 @@ public class Question6 {
 		Tower t1 = hanoi.towers[0];
 		Tower t2 = hanoi.towers[1];
 		Tower t3 = hanoi.towers[2];
+		System.out.println("HANOI MOVE START!!");
 		hanoi.moveDisk(5, t1, t3, t2);
 		hanoi.showStatus();
 	}
