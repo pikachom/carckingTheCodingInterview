@@ -14,7 +14,7 @@ public class Question9 {
 			return;
 		}
 		if (left == 0 && right == 0) {
-			System.out.println(prefix);
+//			System.out.println(prefix);
 			result.add(prefix);
 			return;
 		}

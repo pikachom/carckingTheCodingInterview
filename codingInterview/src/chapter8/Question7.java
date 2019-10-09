@@ -33,7 +33,7 @@ public class Question7 {
 	
 	public static void main(String[] args) {
 		Question8 test = new Question8();
-		System.out.println(test.permutationWithoutDup("abcde"));
+		System.out.println(test.permutationWithoutDup("abc"));
 //		System.out.println("abcde".substring(0, 4));
 //		System.out.println("abcde".substring(4));
 	}
