@@ -43,5 +43,5 @@ public class MergeSort {
 		for (int i = 0; i <= remaining; i++) {
 			array[current + i] = helper[helperLeft + i];
 		}
-	}
+	} 
 }
