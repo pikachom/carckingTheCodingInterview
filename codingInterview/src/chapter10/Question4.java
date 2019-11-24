@@ -43,7 +43,7 @@ public class Question4 {
 		Question4 test = new Question4();
 		int[] list = {1, 2, 3, 4, 5, 6, 10};
 		Listy listy = new Listy(list);
-		System.out.println(test.search(listy, 6));
+		System.out.println(test.search(listy, 10));
 		
 	}
 }
